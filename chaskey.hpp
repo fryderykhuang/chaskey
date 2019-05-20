@@ -28,6 +28,8 @@
 #include <stdint.h>
 #include <byteswap.h>
 
+#define byte uint8_t
+
 namespace crypto {
 
 /*

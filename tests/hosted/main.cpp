@@ -328,7 +328,7 @@ static int decrypt(istream& in, ostream& out,
 	return success;
 }
 
-byte frominput[sizeof(block)] {};
+byte frominput[sizeof(block_t)] {};
 
 #ifdef WITH_AES128CLOC_TEST
 
@@ -376,7 +376,7 @@ static int aes128cloc(istream& in, istream& ad, ostream& out,
 #else
 static int aes128cloc(istream&, istream&, ostream&,
 		const block_t&, const char*, bool, const byte* mac) throw(error) {
-	throw error(string("aes128 is not available");
+	throw error(string("aes128 is not available"));
 }
 #endif
 
